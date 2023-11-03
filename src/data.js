@@ -7,8 +7,8 @@ import image6 from "./assets/Images/image-6.webp";
 import image7 from "./assets/Images/image-7.webp";
 import image8 from "./assets/Images/image-8.webp";
 import image9 from "./assets/Images/image-9.webp";
-import image10 from "./assets/Images/image-10.jpeg";
-import image11 from "./assets/Images/image-11.jpeg";
+import image10 from "./assets/Images/image-10.webp";
+import image11 from "./assets/Images/image-11.webp";
 
 const initialImageList = [
   {
