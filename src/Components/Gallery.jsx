@@ -5,6 +5,7 @@ import DraggableImage from './DraggableImage.jsx';
 import ImageItem from './ImageItem';
 
 const Gallery = ({ ImageData }) => {
+    
     const { images, setImages, selectedImages, setSelectedImages } = ImageData;
 
     const moveImage = (fromIndex, toIndex) => {
@@ -20,16 +21,6 @@ const Gallery = ({ ImageData }) => {
         } else {
             setSelectedImages([...selectedImages, imageId]);
         }
-    };
-
-    useEffect(() => {
-        getSelectedImagesInfo();
-    }, [selectedImages])
-
-    const getSelectedImagesInfo = () => {
-        const selectedImagesInfo = images.filter((image) => selectedImages.includes(image.id));
-        console.log("Selected Images:", selectedImagesInfo);
-        console.log("Number of Selected Images:", selectedImagesInfo.length);
     };
 
     return (
