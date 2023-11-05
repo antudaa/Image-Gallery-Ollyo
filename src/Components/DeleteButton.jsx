@@ -4,6 +4,7 @@ import { handleDeleteSelectedImages } from './Functions/Function';
 const DeleteButton = ({ ImageData }) => {
     const { images, setImages, selectedImages, setSelectedImages } = ImageData;
 
+    // Calling Function To Delete Image .
     const deleteSelectedImages = () => {
         handleDeleteSelectedImages(images, setSelectedImages, setImages, selectedImages);
     };

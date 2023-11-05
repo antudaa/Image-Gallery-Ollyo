@@ -3,7 +3,7 @@ import { BiImage } from 'react-icons/bi';
 
 function ImageItem({ image, key, src, data_id }) {
     return (
-        <div className="cursor-pointer col-span-6 md:col-span-3 lg:col-span-2 rounded-xl text-center bg-white">
+        <div className="cursor-pointer col-span-6 md:col-span-3 lg:col-span-2 rounded-xl text-center bg-white border">
             {image ? (
                 <img
                     key={key}

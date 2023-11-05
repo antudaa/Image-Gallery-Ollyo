@@ -7,12 +7,14 @@ const ItemTypes = {
 };
 
 const DraggableImage = ({ image, index, moveImage, selectedImages, handleSelectImage }) => {
-    
+
+    // UseDrag 
     const [, ref] = useDrag({
         type: ItemTypes.IMAGE,
         item: { index },
     });
 
+    // UseDrop Function 
     const [, drop] = useDrop({
         accept: ItemTypes.IMAGE,
         hover: (draggedItem) => {
@@ -23,6 +25,7 @@ const DraggableImage = ({ image, index, moveImage, selectedImages, handleSelectI
         },
     });
 
+    // State for getting isHovered information.
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -38,14 +41,14 @@ const DraggableImage = ({ image, index, moveImage, selectedImages, handleSelectI
             <label className="image-checkbox relative">
                 <input
                     type="checkbox"
-                    className={`checkbox-input ${selectedImages.includes(image.id) || isHovered ? 'visible' : 'hidden'} absolute top-4 left-4 w-4 h-4`}
+                    className={`checkbox-input ${selectedImages.includes(image.id) || isHovered ? 'visible' : 'hidden'} absolute top-4 left-4 w-4 h-4 cursor-pointer`}
                     onChange={() => handleSelectImage(image.id)}
                     checked={selectedImages.includes(image.id)}
                 />
                 <img
                     src={image.url}
                     alt={`Image ${image.id}`}
-                    className="image-preview rounded-xl"
+                    className="image-preview rounded-xl cursor-pointer"
                 />
             </label>
         </div>
