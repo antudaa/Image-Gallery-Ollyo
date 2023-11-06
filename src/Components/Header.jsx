@@ -11,7 +11,7 @@ const Header = ({ ImageData }) => {
         <header className='h-14 px-8 py-2 flex justify-between gap-8'>
             <nav className='text-xl font-semibold text-gray-700'>
                 {
-                    selectedImagesInfo.length > 0 ? <p className='text-xl font-semibold text-gray-700'>
+                    selectedImagesInfo.length > 0 ? <p className='text-sm md:text-xl font-semibold text-gray-700 whitespace-nowrap'>
                         {selectedImagesInfo.length} Files Selected
                     </p> : "Gallery"
                 }
