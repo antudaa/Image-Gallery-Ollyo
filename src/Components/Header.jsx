@@ -7,6 +7,9 @@ const Header = ({ ImageData }) => {
     // Graving info of selected images.
     const selectedImagesInfo = images.filter((image) => selectedImages.includes(image.id));
 
+    const categories = [...new Set(images.map((image) => image.category))];
+    categories.unshift('All');
+
     return (
         <header className='h-14 px-8 py-2 flex justify-between gap-8'>
             <nav className='text-xl font-semibold text-gray-700'>

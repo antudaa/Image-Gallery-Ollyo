@@ -39,7 +39,6 @@ const Gallery = ({ ImageData }) => {
                             moveImage={moveImage}
                             selectedImages={selectedImages}
                             handleSelectImage={handleSelectImage}
-
                         />
                     ))}
                     {/* Image Item Component */}

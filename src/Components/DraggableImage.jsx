@@ -31,10 +31,10 @@ const DraggableImage = ({ image, index, moveImage, selectedImages, handleSelectI
     return (
         <div
             ref={(node) => ref(drop(node))}
-            className={`hover:opacity-70 bg-opacity-70 border  sortable-item sortable-handle cursor-pointer bg-white rounded-xl ${index === 0
+            className={`hover:opacity-70 bg-opacity-70 border sortable-item sortable-handle cursor-pointer bg-white rounded-xl ${index === 0
                 ? 'row-start-1 col-start-1 col-span-12 md:col-span-6 lg:col-span-4 row-end-3'
                 : 'col-span-6 md:col-span-3 lg:col-span-2'
-                }`}
+            }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
         >
