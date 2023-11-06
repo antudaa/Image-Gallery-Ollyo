@@ -28,7 +28,7 @@ const Gallery = ({ ImageData }) => {
 
     return (
         <DndProvider backend={HTML5Backend}>
-            <div className="p-5">
+            <section className="p-5">
                 <div className="slider-organizer grid grid-cols-12 lg:grid-cols-10 gap-6">
                     {images.map((image, i) => (
                         // Draggable Image Component.
@@ -44,7 +44,7 @@ const Gallery = ({ ImageData }) => {
                     {/* Image Item Component */}
                     <ImageItem />
                 </div>
-            </div>
+            </section>
         </DndProvider>
     );
 };
