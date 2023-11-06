@@ -13,4 +13,4 @@ For state management here I used Redux Toolkit
 For sorting and reordering I used React DND 
 
 # Live LINK
-https://github.com/antudaa/Image-Gallery-Ollyo
+https://image-gallery-antu.netlify.app/
