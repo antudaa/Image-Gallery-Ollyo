@@ -1,24 +1,32 @@
-import React, { useState } from 'react';
-import data from "../data.js";
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setImages, setSelectedImages } from '../Redux/reducers/GallerySlice.jsx';
 import Header from '../Components/Header.jsx';
 import Gallery from '../Components/Gallery.jsx';
 
 const MainLayout = () => {
 
-    // Storing Image Data
-    const [images, setImages] = useState(data.slice());
-    // Storing Selected Images Data
-    const [selectedImages, setSelectedImages] = useState([]);
+    const dispatch = useDispatch();
+    const images = useSelector((state) => state.gallery.images);
+    const selectedImages = useSelector((state) => state.gallery.selectedImages);
 
     return (
         <div>
             <div className='m-4 md:m-16 bg-[aliceblue] rounded-xl'>
                 {/* Header Component */}
-                <Header ImageData={{ images, setImages, selectedImages, setSelectedImages }} />
+                <Header
+                    ImageData={{ images, setImages: (data) => dispatch(setImages(data)), selectedImages, setSelectedImages: (selected) => dispatch(setSelectedImages(selected)) }}
+                />
                 <hr />
-                {/* Image Gallery */}
-                <Gallery ImageData={{ images, setImages, selectedImages, setSelectedImages }} />
-
+                {/* Gallery Component */}
+                <Gallery
+                    ImageData={{
+                        images,
+                        setImages: (data) => dispatch(setImages(data)),
+                        selectedImages,
+                        setSelectedImages: (selected) => dispatch(setSelectedImages(selected)),
+                    }}
+                />
             </div>
         </div>
     );

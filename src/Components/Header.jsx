@@ -2,13 +2,11 @@ import React from 'react';
 import DeleteButton from './DeleteButton';
 
 const Header = ({ ImageData }) => {
+    // Destruturing ImageData
     const { images, setImages, selectedImages, setSelectedImages } = ImageData;
 
     // Graving info of selected images.
     const selectedImagesInfo = images.filter((image) => selectedImages.includes(image.id));
-
-    const categories = [...new Set(images.map((image) => image.category))];
-    categories.unshift('All');
 
     return (
         <header className='h-14 px-8 py-2 flex justify-between gap-8'>

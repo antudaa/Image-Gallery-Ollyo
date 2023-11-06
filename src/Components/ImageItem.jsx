@@ -12,6 +12,7 @@ function ImageItem({ image, key, src, data_id }) {
                     className='sortable-item cursor-pointer col-span-5 md:col-span-2 rounded-xl text-center bg-white'
                 />
             ) : (
+                // If No Image data provided.
                 <div className='flex flex-col py-[35%]'>
                     <BiImage className='mx-auto' />
                     <h3 className='text-lg font-semibold'>Add Images</h3>
